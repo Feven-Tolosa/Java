@@ -1,24 +1,25 @@
 public class Main {
-    int x = 5;
-    String fname = "John";
-    String lname = "Doe";
-    int age = 24;
-  
-    public static void main(String[] args) {
-    //   Main myObj1 = new Main();  // Object 1
-    //   Main myObj2 = new Main();  // Object 2
-    //   myObj2.x = 25;
-    //   System.out.println(myObj1.x);  // Outputs 5
-    //   System.out.println(myObj2.x);  // Outputs 25
-      Main myObj = new Main();
-      System.out.println("Name: " + myObj.fname + " " + myObj.lname);
-      System.out.println("Age: " + myObj.age);
-      myMethod();
+ 
+    // Create a fullThrottle() method
+    public void fullThrottle() {
+      System.out.println("The car is going as fast as it can!");
     }
-    static void myMethod() {
-        System.out.println("Hello World!");
-      }
+  
+    // Create a speed() method and add a parameter
+    public void speed(int maxSpeed) {
+      System.out.println("Max speed is: " + maxSpeed);
+    }
+  
+    // Inside main, call the methods on the myCar object
+    public static void main(String[] args) {
+      Main myCar = new Main();   // Create a myCar object
+      myCar.fullThrottle();      // Call the fullThrottle() method
+      myCar.speed(200);          // Call the speed() method
+    }
   }
+  
+  // The car is going as fast as it can!
+  // Max speed is: 200
    
 
 // Public, which can only be accessed by objects
