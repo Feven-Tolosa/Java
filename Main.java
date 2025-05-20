@@ -1,26 +1,17 @@
 public class Main {
- 
-  // Create a fullThrottle() method
-  public void fullThrottle() {
-    System.out.println("The car is going as fast as it can!");
+  static void checkAge(int age) {
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
   }
 
-  // Create a speed() method and add a parameter
-  public void speed(int maxSpeed) {
-    System.out.println("Max speed is: " + maxSpeed);
-  }
-
-  // Inside main, call the methods on the myCar object
   public static void main(String[] args) {
-    Main myCar = new Main();   // Create a myCar object
-    myCar.fullThrottle();      // Call the fullThrottle() method
-    myCar.speed(200);          // Call the speed() method
+    checkAge(20); // Set age to 15 (which is below 18...)
   }
 }
 
-// The car is going as fast as it can!
-// Max speed is: 200
-   
 
-// Public, which can only be accessed by objects
-// Static method, which means that it can be accessed without creating an object of the class, unlike public
+// The throw statement is used together with an exception type. There are many exception types available in Java: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc:
